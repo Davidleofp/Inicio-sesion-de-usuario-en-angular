@@ -1,0 +1,22 @@
+﻿
+<nav class="navbar navbar-expand navbar-dark bg-dark px-3" *ngIf="user">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Usuarios</a>
+        <button class="btn btn-link nav-item nav-link" (click)="logout()">Desconectarse</button>
+    </div>
+</nav>
+
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
+
+<div class="text-center mt-4">
+    <p>
+        <a href="https://github.com/Davidleofp/Inicio-sesion-de-usuario-en-angular" target="_top">Inicio de sesion con angular</a>
+    </p>
+    <p>
+        <a href="https://www.udistrital.edu.co/programas_pregrado" target="_top">Modelos de programacion ll</a>
+    </p>
+</div>
